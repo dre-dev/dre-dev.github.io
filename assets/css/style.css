@@ -96,14 +96,11 @@ body.page-template-page-fullsingle-me {
   height: 100vh;
   background-color: #141414;
   font-family: 'Roboto', sans-serif;
-  font-weight: 500;
+  font-weight: 450; /* width of every font (thickness) */
   font-size: 45px;
   line-height: 60px;
   letter-spacing: -0.5px;
-  color: #999999;
-  background-image: url("../../images/background.jpg");
-  background-position: center center;
-  background-size: cover; }
+  color: #999999; }
 body.page-template-page-fullsingle-me p {
   margin-bottom: 28px;
   color: #999999; }

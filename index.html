@@ -25,13 +25,12 @@
 
 <body id="fullsingle" class="page-template-page-fullsingle-me me-video">
 
-<!-- YouTube Video -->
+<!-- Video background -->
 <div class="me-video-container">
 	<video class="video" muted autoplay loop src="assets/video/background.webm"></video>
 </div>
 
 <div class="fs-me">
-
 	<!-- Content Container -->
 	<div class="me-content">
 		<div class="logo">
@@ -40,8 +39,21 @@
 
 		<div class="bio">
 
-			<p>Hello there! I train machine learning at <a href="https://adira.co.id">Adira Finance</a>,
-				write words on <a href="#">Medium</a> and spill thoughts on <a href="https://twitter.com/liemwashere">Twitter</a>.</p>
+			<p>
+				<span id="typed-strings"> <!-- this id connected with heading.js -->
+					<span>Hello there!</span>
+					<span>你好！</span>
+					<span>Halo yang disana!</span>
+					<span>こんにちは！</span>
+					<span>¡Hola a todos!</span>
+				</span>
+
+				<span id="typed"></span>
+
+				<br> Currently I train machine learning at <a href="https://adira.co.id">Adira Finance</a>,
+				documenting on <a href="#">Medium</a> and spill thoughts on <a href="https://twitter.com/liemwashere">Twitter</a>.
+
+			</p>
 
 			<div class="credit">
 
@@ -103,6 +115,16 @@
 		</div>
 	</div>
 </div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function (event) {
+		type();
+		movingBackgroundImage();
+	});
+</script>
+
+<script type="text/javascript" src="assets/js/heading.js">
+</script>
 
 </body>
 </html>
