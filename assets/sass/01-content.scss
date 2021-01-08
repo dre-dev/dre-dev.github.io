@@ -40,7 +40,7 @@ $image-background		: url('../images/background.jpg');
 html {
 	background-color: $color-background; 
 }
-body.page-template-page-fullsingle-me {
+body.bumper-page {
 	height: 100vh;
 	background-color: $color-background; 
 	font-family: 'Roboto', sans-serif;
@@ -74,7 +74,7 @@ body.page-template-page-fullsingle-me {
 // Sections
 //-------------------------------------------------------------------------------
 
-.fs-me {
+.fullscreen {
 	padding: 10vh 10vw;
 	overflow:hidden;
 	position: absolute;
@@ -85,7 +85,7 @@ body.page-template-page-fullsingle-me {
 		text-align: center;
 	}	
 
-  	.me-content {
+  	.bumper-content {
   		height: 80vh;
 		display: flex;
   		flex-direction: column;
@@ -154,7 +154,7 @@ body.page-template-page-fullsingle-me {
 // Network
 //-------------------------------------------------------------------------------
 
-.network { 
+.hyperlinks {
 	flex: 1 1 auto;
 	display: flex;
 	flex-direction: column;
@@ -231,7 +231,7 @@ body.page-template-page-fullsingle-me {
 	margin-bottom: 0;
 	animation: fadein 8s;
 
-	p.copyright {
+	p.footnote {
 		font-size: 12px; 
 		line-height: 14px;
 		font-weight: 400;
@@ -249,10 +249,10 @@ body.page-template-page-fullsingle-me {
 // Videos 
 //-------------------------------------------------------------------------------
 
-body.page-template-page-fullsingle-me.me-video {
+body.bumper-page.bg-video {
 	background-image: none; 
 
-	.me-video-container {
+	.bumper-background {
 		overflow:hidden;
 		position: absolute;
 		z-index: 0;
@@ -295,7 +295,7 @@ body.page-template-page-fullsingle-me.me-video {
 	}
 
 	// dark overlay, tweak the 0.6 if needed = 60% darkness
-	.fs-me {
+	.fullscreen {
 		background-color: rgba(0,0,0,0.6); 
 	}
 }

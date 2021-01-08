@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500");
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -15,8 +16,6 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline; }
 
 article, aside, details, figcaption, figure,
@@ -74,7 +73,6 @@ a,
 a:hover {
   text-decoration: none;
   border: none;
-  border-style: none;
   box-shadow: none; }
 
 /* -- Content -- */
@@ -92,33 +90,39 @@ a:hover {
 html {
   background-color: #141414; }
 
-body.page-template-page-fullsingle-me {
+body.bumper-page {
   height: 100vh;
   background-color: #141414;
   font-family: 'Roboto', sans-serif;
-  font-weight: 450; /* width of every font (thickness) */
+  font-weight: 420; /* width of every font (thickness) */
   font-size: 45px;
   line-height: 60px;
   letter-spacing: -0.5px;
   color: #999999; }
-body.page-template-page-fullsingle-me p {
+
+body.bumper-page p {
   margin-bottom: 28px;
   color: #999999; }
+
 @media (max-width: 800px) {
-  body.page-template-page-fullsingle-me p {
+  body.bumper-page p {
     font-size: 32px;
     line-height: 40px; } }
 
-.fs-me {
+.fullscreen {
   padding: 10vh 10vw;
   overflow: hidden;
   position: absolute;
   z-index: 1000; }
+
 @media (max-width: 500px) {
-  .fs-me {
+  .fullscreen {
     padding: 5vh 5vw;
-    text-align: center; } }
-.fs-me .me-content {
+    text-align: center;
+  }
+}
+
+.fullscreen .bumper-content {
   height: 80vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -128,7 +132,7 @@ body.page-template-page-fullsingle-me p {
   -webkit-flex-direction: column;
   flex-direction: column; }
 @media (max-width: 500px) {
-  .fs-me .me-content {
+  .fullscreen .bumper-content {
     height: 90vh; } }
 
 .logo {
@@ -142,10 +146,9 @@ body.page-template-page-fullsingle-me p {
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   flex-direction: column;
-  -webkit-align-self: left;
-  align-self: left;
   -webkit-animation: fadein 2s;
   animation: fadein 2s; }
+
 @media (max-width: 500px) {
   .logo {
     -webkit-align-self: center;
@@ -154,7 +157,7 @@ body.page-template-page-fullsingle-me p {
   max-width: 165px;
   height: auto; }
 
-.bio {
+.heading {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -173,18 +176,25 @@ body.page-template-page-fullsingle-me p {
   letter-spacing: -1px;
   max-width: 66%; }
 @media (max-width: 800px) {
-  .bio {
+  .heading {
     max-width: none; } }
-.bio a {
+.heading a {
   color: #CCCCCC;
   -webkit-transition: 1s;
   transition: 1s; }
-.bio a:hover {
+.heading a:hover {
   color: #FFFFFF;
   -webkit-transition: 0.1s;
   transition: 0.1s; }
 
-.network {
+.more-info {
+  font-size: 12px;
+  line-height: 14px;
+  margin-bottom: 0;
+  -webkit-animation: fadein 8s;
+  animation: fadein 8s; }
+
+.hyperlinks {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
   flex: 1 1 auto;
@@ -198,91 +208,88 @@ body.page-template-page-fullsingle-me p {
   -webkit-animation: fadein 6s;
   animation: fadein 6s;
   margin-top: auto; }
-.network ul {
+.hyperlinks ul {
   -webkit-animation: fadein 6s;
   animation: fadein 6s;
   margin-top: auto; }
-.network ul li {
+.hyperlinks ul li {
   display: inline-block;
   margin-right: 8px; }
-.network ul li a {
+.hyperlinks ul li a {
   display: inline-block;
   width: 30px;
   height: 30px;
   cursor: pointer; }
-.network ul li a .svg-icon {
+.hyperlinks ul li a .svg-icon {
   padding: 4px;
   width: 22px;
   height: 22px;
   margin: 0;
   display: block; }
-.network ul li a .svg-icon path,
-.network ul li a .svg-icon polygon,
-.network ul li a .svg-icon rect {
+.hyperlinks ul li a .svg-icon path,
+.hyperlinks ul li a .svg-icon polygon,
+.hyperlinks ul li a .svg-icon rect {
   fill: #999999;
   -webkit-transition: 1s;
   transition: 1s; }
-.network ul li a .svg-icon circle {
+.hyperlinks ul li a .svg-icon circle {
   stroke: #999999;
   stroke-width: 1; }
-.network ul li a:hover .svg-icon path,
-.network ul li a:hover .svg-icon polygon,
-.network ul li a:hover .svg-icon rect {
+.hyperlinks ul li a:hover .svg-icon path,
+.hyperlinks ul li a:hover .svg-icon polygon,
+.hyperlinks ul li a:hover .svg-icon rect {
   fill: #FFFFFF;
   -webkit-transition: 0.1s;
   transition: 0.1s; }
 
-.credit {
+
+
+.footnote {
   font-size: 12px;
-  line-height: 14px;
-  margin-bottom: 0;
-  -webkit-animation: fadein 8s;
-  animation: fadein 8s; }
-.credit p.copyright {
-  font-size: 12px;
-  line-height: 14px;
+  line-height: 1px;
   font-weight: 400;
   opacity: 0.4; }
-.credit p.copyright a {
-  color: #999999; }
 
-body.page-template-page-fullsingle-me.me-video {
+
+body.bumper-page.bg-video {
   background-image: none; }
-body.page-template-page-fullsingle-me.me-video .me-video-container {
+body.bumper-page.bg-video .bumper-background {
   overflow: hidden;
   position: absolute;
   z-index: 0;
   width: 100vw;
   height: 100vh; }
-body.page-template-page-fullsingle-me.me-video video.video {
+body.bumper-page.bg-video video.video {
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: 50% 50%;
   object-position: 50% 50%;
   width: 100%;
   height: 100%; }
-body.page-template-page-fullsingle-me.me-video .video-wrap {
+body.bumper-page.bg-video .video-wrap {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
-body.page-template-page-fullsingle-me.me-video .video-container {
+body.bumper-page.bg-video .video-container {
   position: relative;
   overflow: hidden;
   height: 56.25vw;
   width: 100vw; }
 @media (max-aspect-ratio: 16 / 9) {
-  body.page-template-page-fullsingle-me.me-video .video-container {
+  body.bumper-page.bg-video .video-container {
     height: 100vh;
     width: 177.7777777778vh; } }
-body.page-template-page-fullsingle-me.me-video .video-container iframe,
-body.page-template-page-fullsingle-me.me-video .video-container object,
-body.page-template-page-fullsingle-me.me-video .video-container embed {
+
+body.bumper-page.bg-video .video-container iframe,
+body.bumper-page.bg-video .video-container object,
+body.bumper-page.bg-video .video-container embed {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%; }
-body.page-template-page-fullsingle-me.me-video .fs-me {
+
+body.bumper-page.bg-video .fullscreen {
   background-color: rgba(0, 0, 0, 0.6); }
